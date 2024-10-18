@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "./components/layout/Header";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Get Notify</h1>
+    <div className="bg-background min-h-screen w-full overflow-x-hidden">
+      <Header />
     </div>
   );
 };
