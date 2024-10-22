@@ -5,6 +5,7 @@ import { GrSend } from "react-icons/gr";
 import { TfiLocationPin } from "react-icons/tfi";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const footerLinks = (data) => {
   return (
@@ -16,9 +17,9 @@ const footerLinks = (data) => {
         {data.links.map((item, index) => {
           return (
             <li key={index}>
-              <a href={item.link} className="text-lg">
+              <Link to={item.link} className="text-lg">
                 {item.text}
-              </a>
+              </Link>
             </li>
           );
         })}
@@ -31,7 +32,7 @@ const usefulLinks = {
   heading: "Useful Links",
   links: [
     { text: "Home", link: "#" },
-    { text: "About us", link: "#" },
+    { text: "About us", link: "/about-us" },
     { text: "Pricing", link: "#" },
     { text: "Contact Us", link: "#" },
   ],

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import OrangeButton from "../common/OrangeButton";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Parent variants
 const containerVariants = {
@@ -69,14 +70,14 @@ const Header = () => {
             <ul className="flex gap-4">
               {/* Animate each child with the itemVariants */}
               <motion.li variants={itemVariants}>
-                <a href="#" className="px-4 py-2">
+                <Link to="/" href="#" className="px-4 py-2">
                   Home
-                </a>
+                </Link>
               </motion.li>
               <motion.li variants={itemVariants}>
-                <a href="#" className="px-4 py-2">
+                <Link to="/about-us" href="#" className="px-4 py-2">
                   About us
-                </a>
+                </Link>
               </motion.li>
               <motion.li variants={itemVariants}>
                 <a href="#" className="px-4 py-2">
