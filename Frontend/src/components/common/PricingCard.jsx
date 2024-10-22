@@ -1,5 +1,4 @@
 import React from "react";
-import { GoDotFill } from "react-icons/go";
 import BlueButton from "./BlueButton";
 import OrangeButton from "./OrangeButton";
 import { MdOutlineDone } from "react-icons/md";
@@ -15,7 +14,12 @@ const PricingCard = ({ data }) => {
       }`}
     >
       <div>
-        <img src={data.image} alt="" />
+        <img
+          src={data.image}
+          alt={data.planName}
+          className="select-none"
+          draggable="false"
+        />
       </div>
       <div>
         <p

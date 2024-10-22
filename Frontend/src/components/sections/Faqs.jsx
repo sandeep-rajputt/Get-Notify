@@ -6,11 +6,7 @@ const faqsData = [
     answer:
       "GetNotify is a powerful reminder and notification service that helps you stay organized by sending timely reminders through various platforms like WhatsApp, Email, and Telegram.",
   },
-  {
-    question: "How do I purchase coins?",
-    answer:
-      "You can purchase coins directly through our website. Simply choose your desired plan (₹99 for 10,000 coins, ₹149 for 16,000 coins, or ₹299 for 35,000 coins) and click the 'Buy Now' button.",
-  },
+
   {
     question: "Can I customize my reminders?",
     answer:

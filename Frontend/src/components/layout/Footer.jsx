@@ -54,7 +54,12 @@ const Footer = () => {
         <div className="flex justify-between w-full  p-6 max-w-7xl mx-auto pt-32 text-white/95 my-20">
           <div className="flex flex-col gap-10 max-w-72">
             <div className="flex items-center gap-2">
-              <img src="/logo.svg" className="w-8" alt="logo" />
+              <img
+                src="/logo.svg"
+                className="w-8"
+                alt="logo select-none"
+                draggable="false"
+              />
               <p className="text-3xl font-extrabold tracking-tighter bg-clip-text">
                 <span>
                   <span>Get</span> <span>Notify</span>

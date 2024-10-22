@@ -10,7 +10,8 @@ const Testimonial = ({ name, feedback, rating, image }) => {
 
       <div className="flex items-center mt-8 -mx-2">
         <img
-          className="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 "
+          className="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 select-none"
+          draggable="false"
           src={image}
           alt={name}
         />
