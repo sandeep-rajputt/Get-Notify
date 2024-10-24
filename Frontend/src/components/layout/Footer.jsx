@@ -31,9 +31,9 @@ const footerLinks = (data) => {
 const usefulLinks = {
   heading: "Useful Links",
   links: [
-    { text: "Home", link: "#" },
+    { text: "Home", link: "/" },
     { text: "About us", link: "/about-us" },
-    { text: "Pricing", link: "#" },
+    { text: "Pricing", link: "/pricing" },
     { text: "Contact Us", link: "/contact-us" },
   ],
 };
@@ -43,7 +43,7 @@ const helpAndSupport = {
   links: [
     { text: "Privacy Policy", link: "/privacy-policy" },
     { text: "Terms & Conditions", link: "/terms-conditions" },
-    { text: "Cancellation/Refund Policies.", link: "#" },
+    { text: "Cancellation/Refund Policies.", link: "/cancellation-refund" },
     { text: "Faqs", link: "#" },
   ],
 };

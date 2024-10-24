@@ -4,7 +4,6 @@ import { FaMinus } from "react-icons/fa6";
 import { FaCircleQuestion } from "react-icons/fa6";
 
 const FaqBox = ({ data, toggle, index, selected }) => {
-  console.log(selected);
   const height = selected ? "h-auto" : "h-[68px]";
   return (
     <div

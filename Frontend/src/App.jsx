@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ScrollToTop from "./utils/ScrollToTop";
 import TermsConditions from "./pages/TermsConditions";
+import CancellationRefund from "./pages/CancellationRefund";
+import PricingPage from "./pages/PricingPage";
 
 const App = () => {
   return (
@@ -22,6 +24,11 @@ const App = () => {
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
+            <Route
+              path="/cancellation-refund"
+              element={<CancellationRefund />}
+            />
+            <Route path="/pricing" element={<PricingPage />} />
           </Routes>
         </div>
         <Footer />

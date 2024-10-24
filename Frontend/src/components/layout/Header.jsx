@@ -76,9 +76,9 @@ const Header = () => {
                 </Link>
               </motion.li>
               <motion.li variants={itemVariants}>
-                <a href="#" className="px-4 py-2">
+                <Link to="/pricing" className="px-4 py-2">
                   Pricing
-                </a>
+                </Link>
               </motion.li>
               <motion.li variants={itemVariants}>
                 <a href="#" className="px-4 py-2">
