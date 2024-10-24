@@ -42,7 +42,7 @@ const helpAndSupport = {
   heading: "Help & Support",
   links: [
     { text: "Privacy Policy", link: "/privacy-policy" },
-    { text: "Terms & Conditions", link: "#" },
+    { text: "Terms & Conditions", link: "/terms-conditions" },
     { text: "Cancellation/Refund Policies.", link: "#" },
     { text: "Faqs", link: "#" },
   ],
