@@ -41,7 +41,7 @@ const usefulLinks = {
 const helpAndSupport = {
   heading: "Help & Support",
   links: [
-    { text: "Privacy Policy", link: "#" },
+    { text: "Privacy Policy", link: "/privacy-policy" },
     { text: "Terms & Conditions", link: "#" },
     { text: "Cancellation/Refund Policies.", link: "#" },
     { text: "Faqs", link: "#" },

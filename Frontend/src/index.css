@@ -8,6 +8,11 @@
   font-style: normal;
 }
 
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes shine {
   0% {
     left: -100%;
