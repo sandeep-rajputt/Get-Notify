@@ -34,7 +34,7 @@ const usefulLinks = {
     { text: "Home", link: "#" },
     { text: "About us", link: "/about-us" },
     { text: "Pricing", link: "#" },
-    { text: "Contact Us", link: "#" },
+    { text: "Contact Us", link: "/contact-us" },
   ],
 };
 

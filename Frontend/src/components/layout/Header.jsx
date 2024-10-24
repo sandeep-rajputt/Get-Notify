@@ -5,20 +5,20 @@ import { Link } from "react-router-dom";
 
 // Parent variants
 const containerVariants = {
-  hidden: { opacity: 0 }, // Starting state
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1, // Final state
+    opacity: 1,
     transition: {
-      delayChildren: 0, // Delay before children start animating
-      staggerChildren: 0.05, // Stagger animation of children
+      delayChildren: 0,
+      staggerChildren: 0.05,
     },
   },
 };
 
 // Child variants
 const itemVariants = {
-  hidden: { opacity: 0, y: 10 }, // Child's initial state
-  visible: { opacity: 1, y: 0 }, // Child's animated state
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const Header = () => {
@@ -48,15 +48,12 @@ const Header = () => {
       className={`fixed flex flex-col w-full transition-all duration-200 ease-out top-0 z-[99999999] ${
         location === "/" ? "pt-5" : "bg-background/70 backdrop-blur shadow "
       }`}
-      variants={containerVariants} // Parent variants
-      initial="hidden" // Initial state of the parent
-      animate="visible" // Animated state of the parent
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
     >
       <div className="flex justify-between w-full items-center p-6 max-w-7xl mx-auto">
-        <motion.div
-          className="flex items-center gap-2"
-          variants={itemVariants} // Child animation
-        >
+        <motion.div className="flex items-center gap-2" variants={itemVariants}>
           <img src="/logo.svg" className="w-8" alt="logo" />
           <p className="text-3xl font-extrabold tracking-tighter bg-gradient-to-r from-[#3F169A] to-[#7F23E9] bg-clip-text text-transparent">
             <span>
@@ -68,7 +65,6 @@ const Header = () => {
         <div className="flex items-center gap-4 text-purple-text">
           <nav>
             <ul className="flex gap-4">
-              {/* Animate each child with the itemVariants */}
               <motion.li variants={itemVariants}>
                 <Link to="/" href="#" className="px-4 py-2">
                   Home
@@ -90,9 +86,9 @@ const Header = () => {
                 </a>
               </motion.li>
               <motion.li variants={itemVariants}>
-                <a href="#" className="px-4 py-2">
+                <Link to="/contact-us" className="px-4 py-2">
                   Contact Us
-                </a>
+                </Link>
               </motion.li>
             </ul>
           </nav>

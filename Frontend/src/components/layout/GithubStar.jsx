@@ -18,7 +18,7 @@ const GithubStar = () => {
         }}
       >
         <p className="text-purple-text w-full bg-main-purple/10 px-2 py-0.5 rounded-full break-keep">
-          if you like Get Notify
+          If you like Get Notify
         </p>
         <div className="relative w-full">
           <img

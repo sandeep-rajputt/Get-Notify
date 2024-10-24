@@ -3,20 +3,20 @@ import OrangeButton from "../common/OrangeButton";
 import { motion } from "framer-motion";
 
 const containerVariants = {
-  hidden: { opacity: 0 }, // Starting state
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1, // Final state
+    opacity: 1,
     transition: {
-      delayChildren: 0.5, // Delay before children start animating
-      staggerChildren: 0.15, // Stagger animation of children
+      delayChildren: 0.5,
+      staggerChildren: 0.15,
     },
   },
 };
 
 // Child variants
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 }, // Child's initial state
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }, // Child's animated state
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 const Hero = () => {
@@ -24,9 +24,9 @@ const Hero = () => {
     <section>
       <div className="w-full grid grid-cols-[1fr_1fr] pt-20 pb-10">
         <motion.div
-          variants={containerVariants} // Parent variants
-          initial="hidden" // Initial state of the parent
-          animate="visible" // Animated state of the parent
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
           className="flex items-center"
         >
           <div className="relative">
@@ -97,7 +97,7 @@ const Hero = () => {
           >
             <motion.img
               animate={{
-                y: [0, -10, 0], // Animates the div up and down
+                y: [0, -10, 0],
               }}
               transition={{
                 delay: 1,

@@ -46,7 +46,7 @@ const PricingData = [
     disc: "Best Value for Power Users.",
     includes: [
       { text: "500 WhatsApp Reminders", tick: true },
-      { text: "1000 Telegram Reminders", tick: true },
+      { text: "3000 Telegram Reminders", tick: true },
       { text: "3000 Instagram Reminders", tick: true },
       { text: "3000 Email Reminders", tick: true },
       { text: "Daily reminders", tick: true },
