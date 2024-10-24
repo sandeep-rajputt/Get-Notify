@@ -44,7 +44,7 @@ const helpAndSupport = {
     { text: "Privacy Policy", link: "/privacy-policy" },
     { text: "Terms & Conditions", link: "/terms-conditions" },
     { text: "Cancellation/Refund Policies.", link: "/cancellation-refund" },
-    { text: "Faqs", link: "#" },
+    { text: "Faqs", link: "/faq" },
   ],
 };
 

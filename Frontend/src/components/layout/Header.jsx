@@ -81,9 +81,9 @@ const Header = () => {
                 </Link>
               </motion.li>
               <motion.li variants={itemVariants}>
-                <a href="#" className="px-4 py-2">
+                <Link to="/faq" className="px-4 py-2">
                   FAQ
-                </a>
+                </Link>
               </motion.li>
               <motion.li variants={itemVariants}>
                 <Link to="/contact-us" className="px-4 py-2">

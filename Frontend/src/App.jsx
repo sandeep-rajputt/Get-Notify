@@ -10,6 +10,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import TermsConditions from "./pages/TermsConditions";
 import CancellationRefund from "./pages/CancellationRefund";
 import PricingPage from "./pages/PricingPage";
+import FAQ from "./pages/FAQ";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
               element={<CancellationRefund />}
             />
             <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/faq" element={<FAQ />} />
           </Routes>
         </div>
         <Footer />
