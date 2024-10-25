@@ -4,15 +4,16 @@ import { FaMinus } from "react-icons/fa6";
 import { FaCircleQuestion } from "react-icons/fa6";
 
 const FaqBox = ({ data, toggle, index, selected }) => {
-  const height = selected ? "h-auto" : "h-[68px]";
   return (
     <div
-      className={`w-full grid grid-cols-[auto_1fr_auto] rounded-md bg-white p-5 gap-5 overflow-hidden transition-[height] duration-1000 ease-in-out ${height} shadow-light-purple`}
+      className={`w-full grid grid-cols-[auto_1fr_auto] rounded-md bg-white p-5 md:gap-5 gap-2 overflow-hidden transition-[height] duration-1000 ease-in-out h-fit shadow-light-purple`}
     >
       <div>
-        <FaCircleQuestion className="text-main-purple text-2xl" />
+        <FaCircleQuestion className="text-main-purple md:text-2xl text-xl md:mt-0 mt-0.5" />
       </div>
-      <p className="font-bold text-xl text-dark-purple">{data.question}</p>
+      <p className="font-bold md:text-xl text-md text-dark-purple">
+        {data.question}
+      </p>
       <button onClick={() => toggle(index)}>
         {selected ? (
           <FaMinus className="text-2xl" />
@@ -20,7 +21,7 @@ const FaqBox = ({ data, toggle, index, selected }) => {
           <MdOutlineAdd className="text-2xl" />
         )}
       </button>
-      <p className="col-start-2">{data.answer}</p>
+      {selected && <p className="col-start-2">{data.answer}</p>}
     </div>
   );
 };

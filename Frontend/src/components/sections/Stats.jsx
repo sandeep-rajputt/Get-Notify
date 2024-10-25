@@ -5,7 +5,7 @@ const Stats = () => {
     <section className="py-10 sm:py-16 lg:py-24">
       <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-5xl text-dark-purple font-bold leading-tight  ">
+          <h2 className="md:text-5xl text-4xl text-dark-purple font-bold leading-tight  ">
             Numbers tell our story
           </h2>
           <p className="mt-3 text-xl leading-relaxed text-purple-text md:mt-8">
@@ -15,7 +15,7 @@ const Stats = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 mt-10 text-center lg:mt-24 sm:gap-x-8 md:grid-cols-3">
+        <div className="grid md:grid-cols-3 gap-8 mt-10 text-center ">
           <div>
             <h3 className="font-bold text-7xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">

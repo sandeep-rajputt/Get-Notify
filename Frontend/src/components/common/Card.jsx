@@ -42,7 +42,7 @@ const colorMap = {
 const Card = ({ data }) => {
   const selectedColor = colorMap[data.color] || colorMap.green;
   return (
-    <div className="max-w-[365px] p-12 bg-white rounded-xl flex flex-col gap-5">
+    <div className="max-w-[365px] p-12 bg-white rounded-xl grid grid-rows-[auto_auto_1fr] h-full gap-5">
       <div className="flex justify-center items-center py-4">
         <div
           className={`p-4 bg-gradient-to-r ${selectedColor.from} ${selectedColor.to} rounded-full`}

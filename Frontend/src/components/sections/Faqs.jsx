@@ -13,9 +13,9 @@ const Faqs = ({ faqsData }) => {
   }
 
   return (
-    <section className="py-20 px-10">
+    <section className="py-20 ">
       <div>
-        <h2 className="text-center text-5xl font-bold mb-4 text-dark-purple">
+        <h2 className="text-center md:text-5xl text-4xl font-bold mb-4 text-dark-purple">
           FAQ - Frequently Asked Questions
         </h2>
         <p className="mx-auto text-purple-text mb-20 max-w-2xl text-center">

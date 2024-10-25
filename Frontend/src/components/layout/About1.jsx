@@ -3,17 +3,18 @@ import React from "react";
 const About1 = () => {
   return (
     <>
-      <section className="overflow-hidden py-20">
+      <section className="overflow-hidden py-20 px-6">
         <div className="container mx-auto">
-          <div className="flex items-center justify-center flex-wrap gap-10">
-            <div className="px-4">
-              <div className="flex items-center justify-center">
+          <div className="flex items-center xl:flex-row flex-col justify-center gap-10">
+            <div className="px-4 order-1">
+              <div className="flex items-center max-w-72 w-full justify-center">
                 <div className="">
                   <div className="py-3 sm:py-4">
                     <img
                       src="https://i.ibb.co/gFb3ns6/image-1.jpg"
-                      alt=""
-                      className="rounded-2xl w-96"
+                      alt="about us"
+                      className="rounded-2xl w-96 select-none"
+                      draggable="false"
                     />
                   </div>
                 </div>

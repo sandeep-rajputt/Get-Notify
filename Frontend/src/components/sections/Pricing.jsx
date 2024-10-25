@@ -46,9 +46,9 @@ const PricingData = [
     disc: "Best Value for Power Users.",
     includes: [
       { text: "500 WhatsApp Reminders", tick: true },
-      { text: "3000 Telegram Reminders", tick: true },
-      { text: "3000 Instagram Reminders", tick: true },
-      { text: "3000 Email Reminders", tick: true },
+      { text: "♾️ Telegram Reminders", tick: true },
+      { text: "♾️ Instagram Reminders", tick: true },
+      { text: "♾️ Email Reminders", tick: true },
       { text: "Daily reminders", tick: true },
       { text: "Weekly reminders", tick: true },
       { text: "Monthly reminders", tick: true },
@@ -63,7 +63,7 @@ const Pricing = () => {
   return (
     <section className="py-36">
       <div className="flex flex-col items-center">
-        <h2 className="text-center text-5xl font-bold mb-4 text-dark-purple">
+        <h2 className="text-center md:text-5xl text-4xl font-bold mb-4 text-dark-purple">
           Best plans, pay what you use
         </h2>
         <p className="text-center w-full text-purple-text mb-8 max-w-2xl">
@@ -72,7 +72,7 @@ const Pricing = () => {
         </p>
       </div>
       <div>
-        <div className="grid grid-cols-[1fr_1fr_1fr] items-center justify-items-center gap-10 mt-10">
+        <div className="grid 2xl:grid-cols-3 md:grid-cols-2 items-center justify-center   justify-items-center gap-10 mt-10">
           {PricingData.map((card, index) => {
             return <PricingCard key={index} data={card} />;
           })}

@@ -33,12 +33,13 @@ const PricingPage = () => {
   return (
     <main className="w-full px-6">
       <div>
-        <h1 className="text-center pt-20 font-bold text-6xl text-main-purple">
+        <h1 className="text-center pt-20 font-bold text-6xl  text-main-purple">
           Pricing
         </h1>
         <p className="text-center text-purple-text font-normal mt-4">
           Home » Pricing
         </p>
+
         <Pricing />
         <Faqs faqsData={faqData} />
       </div>

@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 const PricingCard = ({ data }) => {
   return (
     <div
-      className={`w-full h-full grid grid-rows-[auto_auto_auto_1fr_auto] p-12 gap-7  rounded-xl ${
+      className={`w-full h-full grid grid-rows-[auto_auto_auto_1fr_auto] p-12 gap-7 max-w-96 rounded-xl ${
         data.planName === "Standard Plan"
           ? "bg-main-purple text-white"
           : "bg-white"

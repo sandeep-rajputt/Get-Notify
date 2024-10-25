@@ -39,7 +39,7 @@ const ContactUs = () => {
   return (
     <section className="bg-white rounded-lg py-10 w-full mb-10 px-3 shadow-main-purple/95">
       <div className="flex flex-col items-center">
-        <h2 className="text-center text-5xl font-bold mb-4 text-dark-purple">
+        <h2 className="text-center md:text-5xl text-4xl font-bold mb-4 text-dark-purple">
           Leave a message
         </h2>
         <p className="text-center text-purple-text mb-8 max-w-xl">
@@ -47,7 +47,7 @@ const ContactUs = () => {
         </p>
       </div>
       <form
-        className="grid grid-cols-[1fr_1fr] items-center mt-5 max-w-4xl w-full mx-auto gap-y-10 gap-x-5"
+        className="grid md:grid-cols-2 grid-cols-1 items-center mt-5 max-w-4xl w-full mx-auto gap-y-10 gap-x-5 base:px-5 px-3"
         onSubmit={handleSubmit}
       >
         <div className="w-full">
@@ -88,7 +88,7 @@ const ContactUs = () => {
             className="font-medium px-5 py-4 placeholder-gray-600 text-purple-950 border-2 rounded-md border-main-purple/20 focus:border-main-purple focus:outline-none w-full"
           />
         </div>
-        <div className="w-full col-span-2 ">
+        <div className="w-full md:col-span-2 col-span-1">
           <textarea
             placeholder="Message"
             value={message}
@@ -98,7 +98,7 @@ const ContactUs = () => {
             className="font-medium px-5 py-4  placeholder-gray-600 text-purple-950 border-2 rounded-md border-main-purple/20 focus:border-main-purple focus:outline-none w-full resize-none"
           />
         </div>
-        <div className="col-span-2 flex flex-col items-center justify-center">
+        <div className="md:col-span-2 col-span-1 flex flex-col items-center justify-center">
           <button
             className={`flex items-center gap-2 bg-gradient-to-r from-[#FF7438] to-[#FF8B59] px-8 py-2 text-base text-white font-semibold rounded-full group w-fit`}
           >

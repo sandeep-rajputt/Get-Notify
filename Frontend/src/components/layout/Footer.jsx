@@ -52,8 +52,8 @@ const Footer = () => {
   return (
     <footer className="relative bg-darker-purple w-full mt-20">
       <div>
-        <div className="flex justify-between w-full  p-6 max-w-7xl mx-auto pt-32 text-white/95 my-20">
-          <div className="flex flex-col gap-10 max-w-72">
+        <div className="grid 2xl:grid-cols-[auto_auto_auto_auto] md:grid-cols-[1fr_1fr] 2xl:justify-between justify-center w-full 2xl:gap-1 gap-20  p-6 max-w-7xl mx-auto pt-32 text-white/95 my-20">
+          <div className="flex flex-col w-fit justify-self-end  gap-10 md:max-w-72 max-w-full">
             <div className="flex items-center gap-2">
               <img
                 src="/logo.svg"
@@ -84,9 +84,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div>{footerLinks(usefulLinks)}</div>
-          <div>{footerLinks(helpAndSupport)}</div>
-          <div>
+          <div className="w-fit ">{footerLinks(usefulLinks)}</div>
+          <div className="w-fit md:justify-self-end md:mr-10 mr-0 justify-self-start">
+            {footerLinks(helpAndSupport)}
+          </div>
+          <div className="md:w-fit w-full">
             <p className="text-xl font-bold tracking-normal bg-clip-text mb-10">
               Contact us
             </p>
@@ -127,18 +129,25 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-[1fr_auto] w-[90%] max-w-6xl mx-auto absolute -top-20 left-1/2 -translate-x-1/2 bg-main-purple rounded-xl p-10 shadow-main-purple">
-          <div className="flex flex-col -gap-5">
-            <p className="text-3xl font-bold text-white">
+        <div className="grid md:grid-cols-[1fr_auto]  xl:w-[90%] w-[710px] xl:max-w-6xl max-w-[90%] mx-auto absolute -top-20 left-1/2 -translate-x-1/2 bg-main-purple rounded-xl md:p-10 p-5 shadow-main-purple md:gap-0 gap-5">
+          <div className="flex flex-col md:gap-2">
+            <p className="xl:text-3xl md:text-xl text-lg md:text-start text-center font-bold text-white">
               Need support ? contact our team
             </p>
-            <div className="flex items-center gap-2 mt-4 font-semibold text-white text-sm ">
+            <div className="flex items-center md:justify-start justify-center gap-2 font-semibold text-white md:text-sm text-xs ">
               <IoTimeOutline /> Mon - Fri: 9 am to 5 am
             </div>
           </div>
-          <div>
-            <OrangeButton>getnotify@sandeeprajput.in</OrangeButton>
-            <p className="text-sm mt-2 underline text-center text-white">
+          <div className="flex flex-col items-center">
+            <OrangeButton
+              handleClick={() => {
+                window.location.href = "mailto:getnotify@sandeeprajput.in";
+              }}
+              className="xl:text-base md:text-sm text-xs"
+            >
+              getnotify@sandeeprajput.in
+            </OrangeButton>
+            <p className="text-xs mt-2 underline text-center text-white">
               Read The FAQ
             </p>
           </div>

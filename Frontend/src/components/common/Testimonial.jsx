@@ -3,7 +3,7 @@ import RatingStars from "./RatingStars";
 
 const Testimonial = ({ name, feedback, rating, image }) => {
   return (
-    <div className="p-8 h-full rounded-lg max-w-md bg-white ">
+    <div className="p-8 h-full rounded-lg bg-white grid grid-rows-[1fr_auto] max-w-[365px]">
       <p className="leading-loose text-purple-text text-base font-light ">
         {feedback}
       </p>

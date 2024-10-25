@@ -18,6 +18,16 @@ export default {
         "light-purple": "0 0px 10px -4px #6b49f21f",
       },
     },
+    screens: {
+      base: "500px",
+      md: "700px",
+      lg: "800px",
+      xl: "970px",
+      "2xl": "1108px",
+    },
+    fontFamily: {
+      sans: ["Poppins", "sans-serif"],
+    },
   },
   plugins: [],
 };

@@ -50,7 +50,7 @@ const Testimonials = () => {
   return (
     <section className="py-20">
       <div className="flex flex-col items-center">
-        <h2 className="text-center text-5xl font-bold mb-4 text-dark-purple">
+        <h2 className="text-center md:text-5xl text-4xl font-bold mb-4 text-dark-purple">
           What Our Client Says
         </h2>
         <p className="text-center w-full text-purple-text mb-8 max-w-2xl">
@@ -59,7 +59,7 @@ const Testimonials = () => {
           reminders and notifications.
         </p>
       </div>
-      <div className="grid grid-cols-[1fr_1fr_1fr] items-center justify-items-center gap-10 mt-10">
+      <div className="grid xl:grid-cols-3 md:grid-cols-2 items-center  justify-center justify-items-center gap-10 mt-10">
         {testimonialsData.map((testimonial, index) => {
           return (
             <Testimonial
