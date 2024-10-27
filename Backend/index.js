@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
+import bot from "./Bots/Telegram/bot.js";
 import router from "./routes/router.js";
 dotenv.config();
 

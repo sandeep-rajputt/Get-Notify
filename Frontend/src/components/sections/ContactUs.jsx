@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TiArrowRightThick } from "react-icons/ti";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import axios from "axios";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -10,30 +11,39 @@ const ContactUs = () => {
   const [message, setMessage] = useState("");
   const [loading, SetLoading] = useState(false);
   const [sucess, setSucess] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     SetLoading(true);
 
-    setTimeout(() => {
-      SetLoading(false);
-      console.log("Form submitted:", {
+    await axios
+      .post("/api/contactUs", {
         name,
         email,
         subject,
         website,
         message,
+      })
+      .then(() => {
+        SetLoading(false);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setWebsite("");
+        setMessage("");
+        setSucess(true);
+        setTimeout(() => {
+          setSucess(false);
+        }, 5000);
+      })
+      .catch(() => {
+        SetLoading(false);
+        setError(true);
+        setTimeout(() => {
+          setError(false);
+        }, 5000);
       });
-      setName("");
-      setEmail("");
-      setSubject("");
-      setWebsite("");
-      setMessage("");
-      setSucess(true);
-      setTimeout(() => {
-        setSucess(false);
-      }, 5000);
-    }, 2000);
   }
 
   return (
@@ -112,6 +122,11 @@ const ContactUs = () => {
           {sucess && (
             <p className="text-center mt-5 text-green-500">
               Message sent successfully!
+            </p>
+          )}
+          {error && (
+            <p className="text-center mt-5 text-red-500">
+              Something went wrong! Please try again later.
             </p>
           )}
         </div>
