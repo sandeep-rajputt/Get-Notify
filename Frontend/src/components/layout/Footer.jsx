@@ -6,6 +6,11 @@ import { TfiLocationPin } from "react-icons/tfi";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import validEmail from "../../utils/validEmail";
+import { RiLoader2Line } from "react-icons/ri";
+import { TiTick } from "react-icons/ti";
+import axios from "axios";
 
 const footerLinks = (data) => {
   return (
@@ -49,6 +54,39 @@ const helpAndSupport = {
 };
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [btnDisabled, setBtnDisabled] = useState(false);
+  const [inputDisabled, setInputDisabled] = useState(false);
+  const [sucess, setSucess] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  async function handleClick() {
+    if (!validEmail(email)) {
+      setError(true);
+      return;
+    }
+    setError(false);
+    setBtnDisabled(true);
+    setInputDisabled(true);
+    setLoading(true);
+
+    await axios
+      .post("/api/subscribe", {
+        email,
+      })
+      .finally(() => {
+        setSucess(true);
+        setLoading(false);
+        setInputDisabled(false);
+        setEmail("");
+        setTimeout(() => {
+          setBtnDisabled(false);
+          setSucess(false);
+        }, 3000);
+      });
+  }
+
   return (
     <footer className="relative bg-darker-purple w-full mt-20">
       <div>
@@ -75,13 +113,31 @@ const Footer = () => {
               <div className="bg-white w-full grid grid-cols-[1fr_auto] p-2 rounded gap-2">
                 <input
                   type="email"
+                  value={email}
+                  disabled={inputDisabled}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   className="text-black focus:outline-none w-full h-full"
                 />
-                <button className="bg-og p-2 rounded text-white">
-                  <GrSend />
+                <button
+                  disabled={btnDisabled}
+                  onClick={handleClick}
+                  className="bg-og p-2 rounded text-white"
+                >
+                  {loading ? (
+                    <RiLoader2Line className="animate-spin" />
+                  ) : sucess ? (
+                    <TiTick />
+                  ) : (
+                    <GrSend />
+                  )}
                 </button>
               </div>
+              {error && (
+                <p className="text-red-500 text-xs mt-2">
+                  Invalid Email Address
+                </p>
+              )}
             </div>
           </div>
           <div className="w-fit ">{footerLinks(usefulLinks)}</div>
