@@ -6,6 +6,8 @@ const SignInForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [remberme, setRemeberme] = useState(true);
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,13 +20,10 @@ const SignInForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-md bg-white base:p-10 p-5 shadow-main-purple/95 rounded-md"
+      className="w-full max-w-md bg-white base:p-10 p-5 text-purple-text shadow-main-purple/95 rounded-md"
     >
       <div className="mb-4">
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-700 mb-1"
-        >
+        <label htmlFor="email" className="block text-sm font-medium mb-1">
           Email address
         </label>
         <input
@@ -38,10 +37,7 @@ const SignInForm = () => {
         />
       </div>
       <div className="mb-6">
-        <label
-          htmlFor="password"
-          className="block text-sm font-medium text-gray-700 mb-1"
-        >
+        <label htmlFor="password" className="block text-sm font-medium  mb-1">
           Password
         </label>
         <input
@@ -54,6 +50,26 @@ const SignInForm = () => {
           required
         />
       </div>
+      <div className="mb-4">
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            id="remember"
+            checked={remberme}
+            onChange={(e) => setRemeberme(e.target.checked)}
+            className="w-4 h-4 text-main-purple border-gray-300 rounded focus:ring-main-purple"
+          />
+          <label
+            htmlFor="remember"
+            className="ml-2 text-sm font-medium text-purple-text/70"
+          >
+            Remember me
+          </label>
+        </div>
+      </div>
+      {error && (
+        <p className="text-center text-xs my-5 text-red-500">{error}</p>
+      )}
       <button
         type="submit"
         disabled={loading}
@@ -66,7 +82,10 @@ const SignInForm = () => {
         )}
       </button>
       <div className="mt-4 text-center">
-        <Link to="#" className="text-sm text-main-purple hover:underline">
+        <Link
+          to="/forgot-password"
+          className="text-sm text-main-purple hover:underline"
+        >
           Forgot your password?
         </Link>
       </div>

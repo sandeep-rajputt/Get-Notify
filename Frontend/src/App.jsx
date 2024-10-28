@@ -12,6 +12,7 @@ import CancellationRefund from "./pages/CancellationRefund";
 import PricingPage from "./pages/PricingPage";
 import FAQ from "./pages/FAQ";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import { useLocation } from "react-router-dom";
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
     <>
       <ScrollToTop />
       <div
-        className={`bg-background min-h-screen w-full overflow-x-hidden ${
+        className={`bg-background min-h-screen w-full overflow-x-hidden selection:bg-fuchsia-300 selection:text-fuchsia-900 ${
           headerOn.includes(location.pathname) ? "pt-20" : "pt-0"
         }`}
       >
@@ -49,6 +50,7 @@ const App = () => {
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </div>
         {headerOn.includes(location.pathname) && <Footer />}
