@@ -24,7 +24,7 @@ Get-Notify/
 - **Frontend**: ReactJS
 - **Backend**: Node.js with Express.js
 - **Database**: MongoDB
-- **Hosting**: Render for backend, Infinity Free for frontend
+- **Hosting**: Render for backend, Cloudflare for frontend
 
 ## Installation
 

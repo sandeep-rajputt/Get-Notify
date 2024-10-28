@@ -29,3 +29,7 @@ body {
 .animate-shine {
   animation: shine 5s infinite linear;
 }
+
+img {
+  user-select: none;
+}

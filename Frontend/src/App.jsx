@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/layout/Header";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/layout/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -11,13 +11,30 @@ import TermsConditions from "./pages/TermsConditions";
 import CancellationRefund from "./pages/CancellationRefund";
 import PricingPage from "./pages/PricingPage";
 import FAQ from "./pages/FAQ";
+import Login from "./pages/Login";
+import { useLocation } from "react-router-dom";
 
 const App = () => {
+  const location = useLocation();
+  const headerOn = [
+    "/",
+    "/about-us",
+    "/contact-us",
+    "/pricing",
+    "/faq",
+    "/privacy-policy",
+    "/terms-conditions",
+    "/cancellation-refund",
+  ];
   return (
-    <Router>
+    <>
       <ScrollToTop />
-      <div className="bg-background min-h-screen w-full overflow-x-hidden pt-20">
-        <Header />
+      <div
+        className={`bg-background min-h-screen w-full overflow-x-hidden ${
+          headerOn.includes(location.pathname) ? "pt-20" : "pt-0"
+        }`}
+      >
+        {headerOn.includes(location.pathname) && <Header />}
         <div className="max-w-7xl flex flex-col items-center justify-center mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -31,11 +48,12 @@ const App = () => {
             />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
-        <Footer />
+        {headerOn.includes(location.pathname) && <Footer />}
       </div>
-    </Router>
+    </>
   );
 };
 
