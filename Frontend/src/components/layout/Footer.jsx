@@ -7,10 +7,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import validEmail from "../../utils/validEmail";
 import { RiLoader2Line } from "react-icons/ri";
 import { TiTick } from "react-icons/ti";
-import axios from "axios";
 
 const footerLinks = (data) => {
   return (
@@ -58,11 +56,11 @@ const Footer = () => {
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [inputDisabled, setInputDisabled] = useState(false);
   const [sucess, setSucess] = useState(false);
-  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  async function handleClick() {
-    if (!validEmail(email)) {
+  const handleClick = () => {
+    if (!email.includes("@")) {
       setError(true);
       return;
     }
@@ -70,22 +68,12 @@ const Footer = () => {
     setBtnDisabled(true);
     setInputDisabled(true);
     setLoading(true);
-
-    await axios
-      .post("/api/subscribe", {
-        email,
-      })
-      .finally(() => {
-        setSucess(true);
-        setLoading(false);
-        setInputDisabled(false);
-        setEmail("");
-        setTimeout(() => {
-          setBtnDisabled(false);
-          setSucess(false);
-        }, 3000);
-      });
-  }
+    setTimeout(() => {
+      setLoading(false);
+      setSucess(true);
+    }, 2000);
+  };
+   
 
   return (
     <footer className="relative bg-darker-purple w-full mt-20">
@@ -157,7 +145,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p>Reach us</p>
-                  <p>Bhiwani, Haryana</p>
+                  <p>Delhi, India</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 mt-4 font-medium text-white">
@@ -168,7 +156,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p>Whatsapp</p>
-                  <p>+91 XXXXXXXXXX</p>
+                  <p>+91 1234567890</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 mt-4 font-medium text-white">
@@ -179,7 +167,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p>Mail us</p>
-                  <p>getnotify@sandeeprajput.com</p>
+                  <p>contact@getnotify.in</p>
                 </div>
               </div>
             </div>

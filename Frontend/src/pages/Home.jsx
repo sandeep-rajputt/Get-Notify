@@ -30,7 +30,7 @@ const faqsData = [
   {
     question: "How do I contact customer support?",
     answer:
-      "You can reach our customer support team via the 'Contact Us' page on our website, or email us directly at getnotify@sandeeprajput.in for any inquiries or assistance.",
+      "You can reach our customer support team via the 'Contact Us' page on our website, or email us directly at contact@getnotify.in for any inquiries or assistance.",
   },
 ];
 

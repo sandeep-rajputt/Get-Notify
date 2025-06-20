@@ -58,7 +58,6 @@ const PricingCard = ({ data }) => {
             }`}
           >
             <div className="inline-block h-full">
-              {/* <GoDotFill className="inline-block mr-2" /> */}
               <div
                 className={`w-fit h-fit p-1 rounded-full flex items-center justify-center border mr-2 ${
                   item.tick

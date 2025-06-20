@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { TiArrowRightThick } from "react-icons/ti";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import axios from "axios";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -13,38 +12,22 @@ const ContactUs = () => {
   const [sucess, setSucess] = useState(false);
   const [error, setError] = useState(false);
 
-  async function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     SetLoading(true);
-
-    await axios
-      .post("/api/contactUs", {
-        name,
-        email,
-        subject,
-        website,
-        message,
-      })
-      .then(() => {
-        SetLoading(false);
-        setName("");
-        setEmail("");
-        setSubject("");
-        setWebsite("");
-        setMessage("");
-        setSucess(true);
-        setTimeout(() => {
-          setSucess(false);
-        }, 5000);
-      })
-      .catch(() => {
-        SetLoading(false);
-        setError(true);
-        setTimeout(() => {
-          setError(false);
-        }, 5000);
-      });
-  }
+    setSucess(false);
+    setError(false);
+    setTimeout(() => {
+      SetLoading(false);
+      setSucess(true);
+      setName("");
+      setEmail("");
+      setSubject("");
+      setWebsite("");
+      setMessage("");
+    }, 2000);
+  };
+  
 
   return (
     <section className="bg-white rounded-lg py-10 w-full mb-10 px-3 shadow-main-purple/95">

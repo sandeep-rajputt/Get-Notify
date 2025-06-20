@@ -30,7 +30,7 @@ const faqData = [
   {
     question: "How can I contact support for issues?",
     answer:
-      "You can contact our support team by emailing getnotify@sandeeprajput.in or filling out the contact form on the website. Our team is available from Mon - Fri: 9 am to 5 pm for assistance.",
+      "You can contact our support team by emailing contact@getnotify.in or filling out the contact form on the website. Our team is available from Mon - Fri: 9 am to 5 pm for assistance.",
   },
   {
     question: "Can I get a refund if I'm not satisfied?",

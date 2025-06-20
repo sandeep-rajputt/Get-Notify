@@ -41,10 +41,10 @@ const CancellationRefund = () => {
           <p className="text-gray-600 mb-4">
             To request a refund, please contact our support team at{" "}
             <a
-              href="mailto:getnotify@sandeeprajput.in"
+              href="mailto:contact@getnotify.in"
               className="text-blue-600"
             >
-              getnotify@sandeeprajput.in
+              contact@getnotify.in
             </a>
             . Refunds are processed back to the original payment method.
           </p>
@@ -72,10 +72,10 @@ const CancellationRefund = () => {
             If you believe there has been an error in billing or payment
             processing, please reach out to us immediately at{" "}
             <a
-              href="mailto:getnotify@sandeeprajput.in"
+              href="mailto:contact@getnotify.in"
               className="text-blue-600"
             >
-              getnotify@sandeeprajput.in
+              contact@getnotify.in
             </a>
             . We will investigate the issue and work with you to resolve any
             payment disputes promptly.
@@ -94,10 +94,10 @@ const CancellationRefund = () => {
             <li>
               Email:{" "}
               <a
-                href="mailto:getnotify@sandeeprajput.in"
+                href="mailto:contact@getnotify.in"
                 className="text-blue-600"
               >
-                getnotify@sandeeprajput.in
+                contact@getnotify.in
               </a>
             </li>
             <li>Phone: +91 1234567890</li>

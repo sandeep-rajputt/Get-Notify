@@ -81,14 +81,14 @@ const PrivacyPolicy = () => {
             <li>
               Email:{" "}
               <a
-                href="mailto:getnotify@sandeeprajput.com"
+                href="mailto:contact@getnotify.in"
                 className="text-blue-600"
               >
-                getnotify@sandeeprajput.com
+                contact@getnotify.in
               </a>
             </li>
             <li>Phone: +91 1234567890</li>
-            <li>Address: Bhiwani, Haryana, India</li>
+            <li>Address: Delhi, India</li>
           </ul>
         </section>
 
