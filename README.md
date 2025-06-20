@@ -36,7 +36,7 @@ Get-Notify/
    - 
      ```bash
      cd frontend
-     npm start
+     npm run dev
      ```
 
 ## License
